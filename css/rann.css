@@ -1,0 +1,218 @@
+@import url('../css/font.css');
+html,body{
+    margin:0%;
+    box-sizing:border-box;
+    overflow-x:hidden;
+    scroll-behavior: smooth;
+}
+:root{
+    --text-gray:#3f5321;
+    --text-light:#E36946;
+    --bg-color:#0f0f0f;
+    --white:#ffffff;
+    --midnight:#660708;
+    --sky:linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+    --Lato:'Lato',cursive;
+    --Open_Sans:'Open_Sans',bold;
+    --Montserrat:'Montserrat',cursive;
+    --Roboto:'Roboto',italic;
+}
+ul{
+    list-style-type:none;
+}
+h3{
+    font-family:var(--Montserrat);
+    font-size:1.3rem;
+}
+a{
+    text-decoration:none;
+    color:var(--text-gray);
+}
+.flex-row{
+    display:flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+}
+.nav{
+    background:white;
+    padding:0 2rem;
+    height:0rem;
+    min-height:10vh;
+    overflow:hidden;
+    transition:height 1s ease-in-out;
+}
+.nav .nav-menu{
+    justify-content: space-between;
+}
+.nav .toggle-collapse{
+    position:absolute;
+    top:0%;
+    width:90%;
+    cursor:pointer;
+    display:none;
+}
+.nav .toggle-collapse .toggle-icons{
+    display:flex;
+    justify-content:flex-end;
+    padding:1.7rem 0;
+}
+.nav .toggle-collapse .toggle-icons i{
+     font-size:1.4rem;
+     color:var(--text-gray);
+}
+.collapse{
+    height:30rem;
+}
+.nav .nav-items{
+    display:flex;
+    margin:0;
+}
+.nav .nav-items .nav-link{
+    padding:1.6rem 1rem;
+    font-size:1.1rem;
+    position:relative;
+    font-family:var(--Lato);
+}
+.nav .nav-items .nav-link:hover{
+    background-color:var(--text-light);
+}
+.nav .nav-items .nav-link:hover a{
+    color:var(--white);
+}
+.nav .nav-brand a{
+    font-size:1.6rem;
+    padding:1rem 0;
+    display:block;
+    font-family:var(--Open_Sans);
+}
+.titleText span{
+    color:#5f0f40;
+    font-weight:700;
+    font-size:2.5em;
+}
+.collapse{
+    height:30rem;
+}
+.title p{
+    color:#111;
+    font-style:italic;
+    font-size:1em;
+    color:#003049;
+    font-weight:300;
+    font-family:var(--Lato);
+}
+.title{
+    width:100%;
+    background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:1.5em;
+    flex-direction:column;
+}
+.detail .content {
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    flex-direction:row;
+    margin-top:40px;
+}
+.detail .content .box{
+   width:250px;
+   margin:15px;
+}
+.detail .content .box .imgBx{
+    position:relative;
+    width:100%;
+    height:300px;
+}
+.detail .content .box .imgBx img{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+.detail .content .box .text{
+    padding:15px 0 5px;
+}
+.detail .content .text p{
+    font-weight:bolder;
+    padding-left:10%;
+    padding-right:10%;
+    font-size:150%;
+    font-style:oblique;
+    color:#240046;
+    background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+}
+.day .content{
+    display:flex;
+    justify-content:center;
+    flex-direction:row-reverse;
+    flex-wrap:wrap;
+    background-image: linear-gradient(to top, #d299c2 0%, #fef9d7 100%);
+    margin-top:20px;
+}
+.day .content .box{
+    width:340px;
+    margin:20px;
+    border:15px solid #fff;
+    box-shadow:0 5px 35px rgba(0,0,0,0,08);
+}
+.day .content .box .imgBx{
+     position:relative;
+     width:100%;
+     height:300px;
+}
+.day .content .box .imgBx img{
+     position:absolute;
+     top:0;
+     left:0;
+     width:100%;
+     height:100%;
+     object-fit:cover;
+}
+.day .content .box .text{
+    padding:15px 0 5px;
+}
+.day .content .box .text h3{
+    font-weight:700;
+    font-style:normal;
+    color:#001427;
+}
+@media only screen and (max-width:750px){
+    .nav .nav-menu, .nav .nav-items{
+        flex-direction:column;
+    }
+    .nav .toggle-collapse{
+        display:initial;
+     }
+    section{
+        padding:20px;
+    }
+    .title{
+        text-align:center;
+    }
+    .titleText{
+        font-size:1.8em;
+        line-height:1.5em;
+        margin-bottom:15px;
+        font-weight:300;
+    }
+    .detail .content .box{
+        margin:10px;
+        padding:20px;
+    }
+    .day .content{
+        margin-top:20px;
+    }
+    .day .content .box{
+        margin:10px;
+    }
+    .day .content .box .imgBx
+    {
+       height:260px;
+    }
+    
+}
